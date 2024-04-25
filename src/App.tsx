@@ -8,6 +8,7 @@ import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
+import Tap from "./components/Tap";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -44,6 +45,7 @@ function App() {
             </Button>
           </FlexBoxRow>
           <Counter />
+          <Tap />
           <TransferTon />
           <Jetton />
         </FlexBoxCol>
