@@ -18,9 +18,11 @@ const progressBarStyles = {
 };
 
 const Tap = () => {
-  const maxTaps = 10;
+  let maxTaps = 10;
   const [tapsMade, setTapsMade] = React.useState<number>(0);
   const [width, setWidth] = React.useState<number>(100);
+
+  let remainingTaps = 0//= maxTaps - tapsMade;
 
   //increament by 10% every second
   useEffect(() => {
@@ -28,21 +30,22 @@ const Tap = () => {
       if (width === 0) {
         if (tapsMade < maxTaps) {
           setTapsMade(tapsMade + 1);
+          
         }
-        setWidth(100);
+        setWidth(width + (100 / maxTaps));
+        remainingTaps++
       } else {
         if(width == 100){
           return
         }else{
           setWidth(width + (100 / maxTaps));
-          remainingTaps
+          
         }
-        
       }
+      remainingTaps++
     }, 1000);
-
     return () => clearInterval(timer);
-  }, [width, tapsMade]);
+  }, [width, tapsMade, remainingTaps]);
 
   const incrementWidth = () => {
     if(width <= 0){
@@ -54,7 +57,7 @@ const Tap = () => {
     }
   };
 
-  const remainingTaps = maxTaps - tapsMade;
+  remainingTaps = maxTaps - tapsMade;
 
   return (
     <Card>
