@@ -33,8 +33,8 @@ function App() {
 
   return (
     <StyledApp>
+      <Frontend />
       <AppContainer>
-        <Frontend />
         <FlexBoxCol>
           <FlexBoxRow>
             <TonConnectButton />

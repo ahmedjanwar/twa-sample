@@ -64,11 +64,6 @@ export function Frontend(){
 
   return (
     <div className="flex flex-col h-screen justify-between bg-gradient">
-      <header className="header">
-        <button className="cancel-button">Cancel</button>
-        <div className="title">Habesha coin</div>
-        <div>...</div>
-      </header>
       <main className="main">
         <div className="main-text">{tapsMade}</div>
         <div className="sub-text">
