@@ -79,11 +79,12 @@ export function Frontend(){
         />
       </main>
       <footer className="footer">
+      <div className="progress-text">⚡️{remainingTaps}/10</div>
         <div className="progress">
           <div className="progress-bar">
           <div style={{ ...progressBarStyles.myBar, width: `${width}%` }}></div>
           </div>
-          <div className="progress-text">{remainingTaps}/10</div>
+          
         </div>
         <div className="button-group">
           <button className="button">
