@@ -32,8 +32,9 @@ function App() {
   const { network } = useTonConnect();
 
   return (
-    <StyledApp>
+    <div>
       <Frontend />
+      <StyledApp>
       <AppContainer>
         <FlexBoxCol>
           <FlexBoxRow>
@@ -53,6 +54,8 @@ function App() {
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>
+    </div>
+    
   );
 }
 
